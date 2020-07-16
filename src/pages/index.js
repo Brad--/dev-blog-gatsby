@@ -14,7 +14,7 @@ const IndexPage = () => (
       display: 'flex',
       flexDirection: 'row'
     }}>
-    <SEO title="Home" />
+    <SEO title="Brad's Blog" />
     <div className="intro" style={{
       fontSize: '28px',
       lineHeight: '1em'
