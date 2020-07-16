@@ -13,5 +13,3 @@ Editing the test post with Prose. Is this the right editor for me? Is image uplo
 It does seem that this uses a more verbose date than "mm/dd/yyyy" which is what I would prefer. I don't think the time I make the post matters much. I'm not sure the extra data gets displayed though. We'll see once this is live!
 
 Let's see if the image uploading works easily
-
-![hacker detected]({{site.baseurl}}/images/Screenshot from 2020-07-15 08-08-12.png)

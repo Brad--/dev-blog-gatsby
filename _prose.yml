@@ -2,8 +2,7 @@
 # https://github.com/prose/prose/wiki/Getting-Started
 prose:
   rooturl: 'src/content'
-  siteurl: 'https://awesome-euler-240248.netlify.app/'
-  media: 'images'
+  media: 'src/images'
 
   metadata:
     content:
