@@ -1,0 +1,5 @@
+# Prose Config
+# https://github.com/prose/prose/wiki/Getting-Started
+prose:
+  rooturl: '_posts'
+  siteurl: ''

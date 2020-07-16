@@ -4,19 +4,39 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Leaf from "../components/leaf"
 
 const IndexPage = () => (
-  <Layout>
+  <div style={{
+      margin: `0 auto`,
+      maxWidth: 960,
+      padding: `1em 1.0875rem 1.45rem`,
+      display: 'flex',
+      flexDirection: 'row'
+    }}>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="intro" style={{
+      fontSize: '28px',
+      lineHeight: '1em'
+    }}>
+      <div>
+        <h1 style={{
+          fontSize: '89px'
+          }}>
+          Hey, I'm Brad
+        </h1>
+      </div>
+      <p>This is my blog. I like software and vegan food, so I hope that's what you're here to read about!</p>
+      <p>
+        <Link to="/blog">To the blog!</Link>
+      </p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
+    {/*  */}
+    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      {/* Leaf goes here */}
+      <p></p>
+    </div>
+  </div>
 )
 
 export default IndexPage
