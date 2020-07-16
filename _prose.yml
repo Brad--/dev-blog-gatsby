@@ -1,7 +1,7 @@
 # Prose Config
 # https://github.com/prose/prose/wiki/Getting-Started
 prose:
-  rooturl: 'content'
+  rooturl: 'src/content'
   siteurl: 'https://awesome-euler-240248.netlify.app/'
   media: 'images'
 
@@ -14,6 +14,6 @@ prose:
       - name: "tags"
         field:
           element: "multiselect"
-          label: "Add labels"
-          placeholder: "Add labels"
+          label: "Add Tags"
+          placeholder: "Add Tags"
           alterable: true
