@@ -20,6 +20,8 @@ Since I wanted to be able to post new blog entries, I needed something to create
 ## How do I feel now that I have the blog running?
 So far I've really enjoyed the GatsbyJS workflow. It's an easy language to learn with the quality of documentation, and it clearly makes so much sense for a blog. GatsbyJS and Netlify are a perfect pair! Once I had the blog running locally, it was no sweat to publish it to Netlify. I'm excited to start blogging about my experiences as a developer and to keep developing new features for the blog, as the motivation strikes.
 
+As of now my next planned blog features are blogging with images, tags & filtering, and search!
+
 I hope you may have learned something, and I hope you have a nice day (or night)!
 
 Brad
