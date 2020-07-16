@@ -13,7 +13,7 @@ export default function BlogFeed () {
             lineHeight: '1.25em'
         }}>
             <Link to={value.node.frontmatter.path} style={{
-                textDecoration: 'none',
+                // textDecoration: 'none',
                 fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"
             }}>
                 {value.node.frontmatter.title}

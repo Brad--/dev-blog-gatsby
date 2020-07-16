@@ -7,6 +7,14 @@ html {
   /* #B191FF */
 }
 
+a:link {
+  color: #B191FF
+}
+
+a:visited {
+  color: #272838;
+}
+
 ::moz-selection, ::selection {
   background-color: #B191FF;
   color: #111;
