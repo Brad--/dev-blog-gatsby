@@ -7,12 +7,14 @@ export default function BlogFeed () {
     const edges = data.allMarkdownRemark.edges;
     const links = [];
     for ( const [index, value] of edges.entries()) {
+        console.log(value.node.fields.slug);
         links.push(
         <li style={{
             fontSize: 50,
             lineHeight: '1.25em'
-        }}>
-            <Link to={value.node.frontmatter.path} style={{
+        }}
+        key={index}>
+            <Link to={value.node.fields.slug} style={{
                 // textDecoration: 'none',
                 fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"
             }}>
@@ -34,9 +36,11 @@ export const query = graphql`
         allMarkdownRemark {
             edges {
                 node {
+                    fields {
+                        slug
+                    }
                     frontmatter {
-                        title,
-                        path
+                        title
                     }
                 }
             }

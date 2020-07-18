@@ -1,10 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import Leaf from "../components/leaf"
 
 const IndexPage = () => (
   <div style={{
@@ -31,7 +28,6 @@ const IndexPage = () => (
         <Link to="/blog">To the blog!</Link>
       </p>
     </div>
-    {/*  */}
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       {/* Leaf goes here */}
       <p></p>
