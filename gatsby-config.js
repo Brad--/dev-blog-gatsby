@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Brad's Dev Blog`,
-    description: `I wanted to make a lightweight, modern blog that I could host on Netlify / GitHub pages, this is it!`,
+    description: `A blog about programming - and vegan food - but mostly programming`,
     author: `@Brad--`,
   },
   plugins: [
@@ -20,7 +20,19 @@ module.exports = {
     // `gatsby-plugin-offline`,
 
     // Configure markdown source
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: 'static'
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
