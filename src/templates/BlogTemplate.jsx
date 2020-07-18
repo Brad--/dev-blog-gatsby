@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout";
 import SEO from "../components/seo"
 
-export const BlogTemplate = ({ content }) => {
+export default function BlogTemplate ({ content }) {
     const { markdownRemark } = content;
     const { frontmatter, html } = markdownRemark;
     return (
@@ -29,13 +29,12 @@ export const BlogTemplate = ({ content }) => {
 }
 
 export const pageQuery = graphql`
-    query($id: String!) {
-        markdownRemark(id: { eq: $id }) {
+    query($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
             id
             html
             frontmatter {
                 date(formatString: "MMMM DD, YYYY")
-                path
                 title
             }
         }

@@ -9,10 +9,10 @@ const path = require('path');
 
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
 
-    const result = await graphql(`
+    return graphql(`
         {
             allMarkdownRemark {
                 edges {
@@ -25,21 +25,29 @@ exports.createPages = async ({ actions, graphql }) => {
                 }
             }
         }
-    `)
-    if (result.errors) {
-        console.error(result.errors);
-    }
+    `).then((result) => {
+        console.log('GATSBY NODE results inc' )
+        // console.log(result)
+        // console.log(result.data.allMarkdownRemark.edges)
+        if (result.errors) {
+            console.error(result.errors);
+        }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const id = node.id
-        createPage({
-            path: node.fields.slug,
-            component: path.resolve(`src/templates/BlogTemplate.jsx`),
-            context: {
-                id
-            }
+        const posts = result.data.allMarkdownRemark.edges
+
+        console.log(posts)
+    
+        posts.forEach(( edge ) => {
+            console.log('edge inc')
+            console.log(edge)
+            const id = edge.node.id
+            console.log('id: ' + id);
+            createPage({
+                path: edge.node.fields.slug,
+                component: path.resolve(`src/templates/BlogTemplate.jsx`),
+            })
         })
-    });
+    })
 }
 
 exports.onCreateNode = ({ node, actions, getNode}) => {
