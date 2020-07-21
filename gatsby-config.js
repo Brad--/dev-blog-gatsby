@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Brad's Dev Blog`,
-    description: `I wanted to make a lightweight, modern blog that I could host on Netlify / GitHub pages, this is it!`,
+    description: `A lightweight blog hosted on Netlify, talking about software and vegan food.`,
     author: `@Brad--`,
   },
   plugins: [
