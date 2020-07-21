@@ -18,5 +18,5 @@ Sometimes you just got make things _italic_ or maybe **bold**.
 
 Let's see if the image uploading works this time, now that I'm using the proper /src directory
 
-![hacker detected]({{site.baseurl}}/src/images/hacker-detected.png)
+![hacker detected](./images/hacker-detected.png)
 

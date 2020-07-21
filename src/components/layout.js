@@ -1,9 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import GitHub from "./github"
+import HomeIcon from "./home-icon"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,11 +29,18 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Link to="/blog">To the blog!</Link><br/>
         <footer style={{
           fontSize: "12px"
           }}>
-            © {new Date().getFullYear()}
+            <div style={{
+              display: `flex`,
+              flexDirection: `row`,
+              justifyItems: `center`
+            }}>
+              <GitHub color="lilac"/>
+              <HomeIcon/>
+            </div>
+            <span>Made With &lt;3 © {new Date().getFullYear()}</span>
         </footer>
       </div>
     </>
