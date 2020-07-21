@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
       <div style={{
         alignSelf: 'center'
       }}>
-        <Link to="/">Home</Link>
+        <Link to="/">About Me</Link>
       </div>
     </div>
   </header>

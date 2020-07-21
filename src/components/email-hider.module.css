@@ -1,0 +1,14 @@
+.emailHider {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.emailHider:active, .emailHider:focus {
+    border: 0;
+    outline: 0;
+}

@@ -18,7 +18,7 @@ export default function BlogTemplate({ data }) {
                 }}>{frontmatter.title}</h1>
                 <h2 style= {{
                     fontSize: 21,
-                    paddingLeft: '.75em'
+                    paddingLeft: '.5em'
                 }}>{frontmatter.date}</h2>
                 <div className="blog-post--content"
                     dangerouslySetInnerHTML={{ __html: html }}

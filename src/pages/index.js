@@ -1,10 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import Leaf from "../components/leaf"
+import GitHub from "../components/github"
+import EmailHider from "../components/email-hider"
 
 const IndexPage = () => (
   <div style={{
@@ -17,7 +16,7 @@ const IndexPage = () => (
     <SEO title="Brad's Blog" />
     <div className="intro" style={{
       fontSize: '28px',
-      lineHeight: '1em'
+      lineHeight: '1.2em'
     }}>
       <div>
         <h1 style={{
@@ -27,9 +26,13 @@ const IndexPage = () => (
         </h1>
       </div>
       <p>This is my blog. I like software and vegan food, so I hope that's what you're here to read about!</p>
-      <p>
-        <Link to="/blog">To the blog!</Link>
-      </p>
+      <p><Link to="/blog">To the blog!</Link></p>
+      <p>I also happen to be looking for a job right now. Do you need a Javascript developer? <EmailHider linkText="Shoot me an email"/>, I'd love to talk!</p>
+      <div className="icon-row">
+        <div className="icon">
+          <GitHub/>
+        </div>
+      </div>
     </div>
     {/*  */}
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>

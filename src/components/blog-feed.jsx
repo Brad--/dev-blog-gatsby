@@ -8,7 +8,8 @@ export default function BlogFeed () {
     const links = [];
     for ( const [index, value] of edges.entries()) {
         links.push(
-        <li style={{
+        <li key={index} 
+        style={{
             fontSize: 50,
             lineHeight: '1.25em'
         }}>
@@ -31,7 +32,7 @@ export default function BlogFeed () {
 
 export const query = graphql`
     query FeedQuery {
-        allMarkdownRemark {
+        allMarkdownRemark (sort: {fields: [frontmatter___date], order: DESC}) {
             edges {
                 node {
                     frontmatter {
